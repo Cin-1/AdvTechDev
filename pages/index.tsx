@@ -1,4 +1,8 @@
 import Head from "next/head";
+import NavbarScroller from "../components/NavBar";
+import Footer from '../components/footer';
+import Buscador from '../components/Buscador';
+import Card from '../components/CardCity';
 
 
 export default function Home() {
@@ -17,11 +21,12 @@ export default function Home() {
         </Head>
 
       <main>
-        <h1 style={{ fontFamily: "Roboto Slab" }}>Clima App</h1>
-
+            <NavbarScroller/>
+            <Buscador/>
+            <Card/>
+            <Footer/>
       </main>
 
-      <footer style={{ fontFamily: "Roboto Slab" }}>Footer aqui </footer>
     </div>
   );
 }

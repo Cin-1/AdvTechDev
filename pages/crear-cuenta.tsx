@@ -11,7 +11,6 @@ const STATE_INICIAL = {
 }
  
 const CrearCuenta = () => {
-  let STATE_INICIAL = {} as STATE_INICIAL;
 
   const [ error, guardarError] = useState(false);
 

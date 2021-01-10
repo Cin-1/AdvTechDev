@@ -1,7 +1,6 @@
-import App from 'next/app';
 import firebase, { FirebaseContext } from '../firebase';
 import useAutenticacion from '../hooks/useAutenticacion';
-import NavbarScroller from "../components/NavBar";
+import CiudadesProvider from "../Context/CiudadesContext"
 
 
 const MyApp = props => {
@@ -15,9 +14,10 @@ const MyApp = props => {
                 usuario
             }}
         >
-                    <NavbarScroller/>
-
+            <CiudadesProvider>
+           
             <Component {...pageProps} />
+            </CiudadesProvider>
         </FirebaseContext.Provider>
     )
 }

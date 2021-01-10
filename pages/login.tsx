@@ -11,6 +11,7 @@ interface STATE_INICIAL {
 }
 
 const Login = () => {
+  
   let STATE_INICIAL = {} as STATE_INICIAL;
   const [ error, guardarError] = useState(false);
 
