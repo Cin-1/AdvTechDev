@@ -1,6 +1,7 @@
 import firebase, { FirebaseContext } from '../firebase';
 import useAutenticacion from '../hooks/useAutenticacion';
 import CiudadesProvider from "../Context/CiudadesContext"
+import HistoricoProvider from '../Context/HistoricoContext';
 
 
 const MyApp = props => {
@@ -15,8 +16,10 @@ const MyApp = props => {
             }}
         >
             <CiudadesProvider>
+            <HistoricoProvider>
            
             <Component {...pageProps} />
+            </HistoricoProvider>
             </CiudadesProvider>
         </FirebaseContext.Provider>
     )
