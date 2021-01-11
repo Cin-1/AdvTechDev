@@ -72,13 +72,15 @@ return(
                   <option value="US"> Estados Unidos</option>
                   <option value="CL"> Chile</option>
                   <option value="ES"> España</option>
+                  <option value="MX"> México</option>
+
               </select>
               </div>
 
             <input className="bg-blue-500 hover:bg-blue-700 text-white flex-50 font-bold py-2 px-4 rounded-lg cursor-pointer " type="submit" value="Buscar" />
           </div>
           </form>
-          {error ? <p>Ingrese un valor </p>: null}
+          {error ? <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-yellow-700 bg-yellow-100 border border-yellow-300 ">Ingrese un valor </p>: null}
           </div>
           </div>
 

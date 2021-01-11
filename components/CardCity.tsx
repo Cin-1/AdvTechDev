@@ -32,7 +32,7 @@ const Card = () => {
          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl m-2">
                Agregar a favoritos</button>
          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl mr-2">
-           Ver historico (15 días)</button>
+           Ver histórico (15 días)</button>
      </div>
     </div>
     </div>

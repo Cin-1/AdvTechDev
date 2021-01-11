@@ -5,13 +5,15 @@ import useValidacion from '../hooks/useValidacion';
 import validarCrearCuenta from '../validacion/validarCrearCuenta';
 import NavbarScroller from '../components/NavBar';
 
-const STATE_INICIAL = {
-  nombre: '',
-  email: '',
-  password: ''
+interface STATE_INICIAL {
+  nombre?: string,
+  email?: string,
+  password?: string,
 }
  
 const CrearCuenta = () => {
+
+  let STATE_INICIAL = {} as STATE_INICIAL;
 
   const [ error, guardarError] = useState(false);
 
@@ -38,7 +40,7 @@ const CrearCuenta = () => {
         <div className="text-center mb-4">
           <h1 className="font-bold text-2xl font-bold">Registrarse</h1>
         </div>          
-        {error && <p>{error}</p> }
+        {error && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{error}</p> }
 
         <form
             onSubmit={handleSubmit}
@@ -55,7 +57,7 @@ const CrearCuenta = () => {
                       onChange={handleChange}
                   />
               </div>
-              {errores.nombre && <p>{errores.nombre}</p> }
+              {errores.nombre && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{errores.nombre}</p> }
 
 
   
@@ -70,7 +72,7 @@ const CrearCuenta = () => {
                       onChange={handleChange}
                   />
               </div>
-              {errores.email && <p>{errores.email}</p> }
+              {errores.email && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{errores.email}</p> }
 
   
               <div className="mt-2">
@@ -85,7 +87,7 @@ const CrearCuenta = () => {
                       onChange={handleChange}
                   />
               </div>
-              {errores.password && <p>{errores.password}</p> }
+              {errores.password && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{errores.password}</p> }
 
 
   

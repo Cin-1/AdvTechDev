@@ -2,8 +2,6 @@ import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 import { FirebaseContext } from '../firebase';
 
-
-
 const NavbarScroller = () => {
 
     const { usuario, firebase } = useContext(FirebaseContext);

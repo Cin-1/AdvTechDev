@@ -31,8 +31,7 @@ const Login = () => {
     }
   }
 
-
-  return (
+    return (
     <div className="mb-18 ">
     <link rel= "stylesheet" href="output.css"/>
       <NavbarScroller/>
@@ -41,7 +40,8 @@ const Login = () => {
         <div className="text-center mb-8">
           <h1 className="font-bold text-2xl font-bold">Login</h1>
         </div>          
-        
+        {error && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{error}</p> }
+
         <form
             onSubmit={handleSubmit}
             noValidate
@@ -57,7 +57,7 @@ const Login = () => {
                       onChange={handleChange}
                   />
               </div>
-              {errores.email && <p>{errores.email}</p> }
+              {errores.email && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{errores.email}</p> }
 
   
               <div className="mt-5">
@@ -71,7 +71,7 @@ const Login = () => {
                       onChange={handleChange}
                   />
               </div>
-              {errores.password && <p>{errores.password}</p> }
+              {errores.password && <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-red-700 bg-red-100 border border-red-300 ">{errores.password}</p> }
 
 
               <div className="mt-10">

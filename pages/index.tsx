@@ -1,6 +1,5 @@
 import Head from "next/head";
 import NavbarScroller from "../components/NavBar";
-import Footer from '../components/footer';
 import Buscador from '../components/Buscador';
 import Card from '../components/CardCity';
 
