@@ -64,12 +64,18 @@ return(
                   <option value=""> Seleccione un país</option>
                   <option value="AR"> Argentina</option>
                   <option value="PE"> Perú</option>
-                  <option value="CH"> Chile</option>
+                  <option value="CO"> Colombia</option>
+                  <option value="UR"> Uruguay</option>
+                  <option value="EC"> Ecuador</option>
+                  <option value="UY"> Uruguay</option>
+                  <option value="BR"> Brasil</option>
+                  <option value="US"> Estados Unidos</option>
+                  <option value="CL"> Chile</option>
                   <option value="ES"> España</option>
               </select>
               </div>
 
-            <input className="bg-blue-500 hover:bg-blue-700 text-white flex-50 font-bold py-2 px-4 rounded-full  cursor-pointer " type="submit" value="Buscar" />
+            <input className="bg-blue-500 hover:bg-blue-700 text-white flex-50 font-bold py-2 px-4 rounded-lg cursor-pointer " type="submit" value="Buscar" />
           </div>
           </form>
           {error ? <p>Ingrese un valor </p>: null}

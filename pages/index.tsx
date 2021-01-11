@@ -20,11 +20,10 @@ export default function Home() {
         
         </Head>
 
-      <main>
+      <main >
             <NavbarScroller/>
             <Buscador/>
             <Card/>
-            <Footer/>
       </main>
 
     </div>

@@ -3,6 +3,7 @@ import Router from 'next/router';
 import firebase from '../firebase';
 import useValidacion from '../hooks/useValidacion';
 import validarCrearCuenta from '../validacion/validarCrearCuenta';
+import NavbarScroller from '../components/NavBar';
 
 const STATE_INICIAL = {
   nombre: '',
@@ -27,22 +28,28 @@ const CrearCuenta = () => {
       guardarError(error.message);
     }
   }
-
-
   return (
-    <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-        <>
-          <h1 >Crear Cuenta</h1>
-          <form
+<div>
+    <link rel= "stylesheet" href="output.css"/>
+
+      <NavbarScroller/>
+      <div className="mx-auto ">
+      <div className="max-w-sm mx-auto my-24 bg-white px-5 py-10 rounded shadow-xl bg-blue-200">
+        <div className="text-center mb-4">
+          <h1 className="font-bold text-2xl font-bold">Registrarse</h1>
+        </div>          
+        {error && <p>{error}</p> }
+
+        <form
             onSubmit={handleSubmit}
             noValidate
-          >
-              <div>
-                  <label className="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="nombre">Nombre</label>
+          >  
+              <div className="mt-2">
+                  <label  htmlFor="nombre">Nombre</label>
                   <input 
+                     className="block w-full p-2 border rounded border-gray-500"
                       type="text"
                       id="nombre"
-                      placeholder="Tu Nombre"
                       name="nombre"
                       value={nombre}
                       onChange={handleChange}
@@ -52,12 +59,12 @@ const CrearCuenta = () => {
 
 
   
-              <div>
+              <div className="mt-2">
                   <label htmlFor="email">Email</label>
                   <input 
+                     className="block w-full p-2 border rounded border-gray-500"
                       type="email"
                       id="email"
-                      placeholder="Tu Email"
                       name="email"
                       value={email}
                       onChange={handleChange}
@@ -66,12 +73,13 @@ const CrearCuenta = () => {
               {errores.email && <p>{errores.email}</p> }
 
   
-              <div>
+              <div className="mt-2">
                   <label htmlFor="password">Password</label>
                   <input 
+                      className="block w-full p-2 border rounded border-gray-500"
                       type="password"
                       id="password"
-                      placeholder="Tu Password"
+                      placeholder="+de 6 caracteres"
                       name="password"
                       value={password}
                       onChange={handleChange}
@@ -81,13 +89,16 @@ const CrearCuenta = () => {
 
 
   
-              <input  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+              <div className="mt-10">
+                <input className="py-3 bg-blue-700 hover:bg-blue-500 rounded text-white text-center w-full cursor-pointer"
                 type="submit"
                 value="Crear Cuenta"
               />
+              </div>
           </form>
-        </>
-    </div>
+          </div>
+        </div>
+        </div>
   )
 }
 

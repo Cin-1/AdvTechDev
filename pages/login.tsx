@@ -3,6 +3,7 @@ import Router from 'next/router';
 import firebase from '../firebase';
 import useValidacion from '../hooks/useValidacion';
 import validarIniciarSesion from '../validacion/validarIniciarSesion';
+import NavbarScroller from '../components/NavBar';
 
 
 interface STATE_INICIAL {
@@ -32,19 +33,25 @@ const Login = () => {
 
 
   return (
-    <div>
-        <>
-          <h1>Iniciar Sesión</h1>
-          <form
+    <div className="mb-18 ">
+    <link rel= "stylesheet" href="output.css"/>
+      <NavbarScroller/>
+      <div className="mx-auto">
+      <div className="max-w-sm mx-auto my-24 bg-white px-5 py-10 rounded shadow-xl bg-blue-200">
+        <div className="text-center mb-8">
+          <h1 className="font-bold text-2xl font-bold">Login</h1>
+        </div>          
+        
+        <form
             onSubmit={handleSubmit}
             noValidate
           >  
-              <div>
+              <div className="mt-5">
                   <label htmlFor="email">Email</label>
                   <input 
+                       className="block w-full p-2 border rounded border-gray-500"
                       type="email"
                       id="email"
-                      placeholder="Tu Email"
                       name="email"
                       value={email}
                       onChange={handleChange}
@@ -53,12 +60,12 @@ const Login = () => {
               {errores.email && <p>{errores.email}</p> }
 
   
-              <div>
+              <div className="mt-5">
                   <label htmlFor="password">Password</label>
                   <input 
+                      className="block w-full p-2 border rounded border-gray-500"
                       type="password"
                       id="password"
-                      placeholder="Tu Password"
                       name="password"
                       value={password}
                       onChange={handleChange}
@@ -67,14 +74,16 @@ const Login = () => {
               {errores.password && <p>{errores.password}</p> }
 
 
-  
-              <input className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+              <div className="mt-10">
+                <input className="py-3 bg-blue-700 hover:bg-blue-500 rounded text-white text-center w-full cursor-pointer"
                 type="submit"
                 value="Iniciar Sesión"
               />
+              </div>
           </form>
-        </>
-    </div>
+          </div>
+        </div>
+        </div>
   )
 }
 

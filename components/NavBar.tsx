@@ -22,7 +22,7 @@ const NavbarScroller = () => {
           <Link href="/">
           <button className="text-gray-300 hover:bg-gray-800 hover:text-white px-4 py-4 rounded-md text-sm font-medium">Inicio</button>
           </Link>
-          <Link href="/">
+          <Link href="/favoritos">
           <button className="text-gray-300 hover:bg-gray-800 hover:text-white px-4 py-4 rounded-md text-sm font-medium">Favoritos</button>
           </Link>
         </div>
@@ -34,18 +34,18 @@ const NavbarScroller = () => {
                         <>
                             <p className="text-gray-300  py-2 rounded-md text-sm font-medium m-2 mr-8 ">
                                 Hola: {usuario.displayName} </p>
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl"
                                 onClick={() => firebase.cerrarSesion() }
                             >Cerrar Sesión</button>
 </>
                     ) : (
                         <>
                             <Link href="/login">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl m-2"
                                 >Login</button>
                             </Link>
                             <Link href="/crear-cuenta">
-                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Crear Cuenta</button>
+                                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">Crear Cuenta</button>
                             </Link>
                         </>
                     ) }
