@@ -6,7 +6,7 @@ import { CiudadesContext } from '../Context/CiudadesContext';
 const Buscador = () => {
 
     const { usuario } = useContext(FirebaseContext);
-    const {  buscarCiudad, guardarConsulta } = useContext(CiudadesContext)
+    const {  buscarCiudad, guardarConsulta, errorbuscando } = useContext(CiudadesContext)
     const [busqueda, guardarBusqueda] = useState({
         ciudad: "",
         pais: "",
@@ -34,9 +34,8 @@ const Buscador = () => {
           guardarBusqueda({
             ciudad: "",
             pais: "",})
-
         }
-
+console.log(errorbuscando)
 return(
 
 <div className="container mx-auto mt-30 h-48 flex flex-wrap content-center">
@@ -80,7 +79,7 @@ return(
             <input className="bg-blue-500 hover:bg-blue-700 text-white flex-50 font-bold py-2 px-4 rounded-lg cursor-pointer " type="submit" value="Buscar" />
           </div>
           </form>
-          {error ? <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-yellow-700 bg-yellow-100 border border-yellow-300 ">Ingrese un valor </p>: null}
+          {errorbuscando ? <p className="flex justify-center items-center m-1 font-medium py-1 px-2 bg-white rounded-md text-yellow-700 bg-yellow-100 border border-yellow-300 ">{errorbuscando} </p>: null}
           </div>
           </div>
 

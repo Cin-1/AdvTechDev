@@ -3,7 +3,6 @@ import useAutenticacion from '../hooks/useAutenticacion';
 import CiudadesProvider from "../Context/CiudadesContext"
 import HistoricoProvider from '../Context/HistoricoContext';
 
-
 const MyApp = props => {
     const usuario = useAutenticacion();
     const { Component, pageProps } = props;
