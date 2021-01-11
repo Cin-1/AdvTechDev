@@ -14,15 +14,16 @@ const Historico = () => {
     console.log(historicoClima, "sdnd")
 
   return (
-
-    <div >
-            <link rel= "stylesheet" href="output.css"/>
+    <>
+     <link rel= "stylesheet" href="output.css"/>
             <NavbarScroller/>
-
+    <div className="flex flex-row ">
+           
           {Object.entries(historicoClima).length !=0 ?  historicoClima.map((card) => (
         <CardHistorico  key={card.current.dt} card={card} />
       )): null}
     </div>
+    </>
   );
 };
 

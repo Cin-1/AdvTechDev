@@ -36,7 +36,7 @@ const Card = () => {
       <div className="bg-gray-300 rounded overflow-hidden shadow-md m-9 items-center" >
        <h2 className="mt-8 text-center font-medium" >El clima en {name} es de:</h2>
          <div className='mt-2 text-center font-medium'>
-           <p >{(main.temp - 273.15, 10).toFixed(2)+' ° C'}</p>
+           <p >{(main.temp - 273.15).toFixed(2)+' ° C'}</p>
            <img className='m-auto' src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
         </div>
     <div>
@@ -50,7 +50,7 @@ const Card = () => {
          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl m-2">
                Agregar a favoritos</button>
          <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl mr-2">
-           Ver día anterior</button>
+           Ver histórico</button>
      </div>
     </div>
     </div>

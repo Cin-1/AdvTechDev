@@ -27,10 +27,12 @@ const CiudadesProvider = (props) => {
     try {const url : string =`http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${api}`
     const respuesta = await axios.get(url);
     guardarCiudad(respuesta.data)
+    guardarConsulta(true)
     }
     catch(err){
     console.log(err)
     guardarError('Ciudad no encontrada')
+    guardarConsulta(false)
   }
   }
    consultarAPI() 
